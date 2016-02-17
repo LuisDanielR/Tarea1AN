@@ -411,6 +411,7 @@
 				F6F4AEFA1C74050D00AC1BE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6F4AEFB1C74050D00AC1BE5 /* Build configuration list for PBXNativeTarget "Tarea1 ANTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				F6F4AEFD1C74050D00AC1BE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

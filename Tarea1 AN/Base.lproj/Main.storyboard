@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tarea1_AN" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +15,76 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2JO-W0-LhJ">
+                                <rect key="frame" x="252" y="72" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFk-08-AsP">
+                                <rect key="frame" x="282" y="177" width="37" height="30"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="limpiar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dLv-8F-kzn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBN:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKr-gl-kWU">
+                                <rect key="frame" x="169" y="81" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omB-5z-e3c">
+                                <rect key="frame" x="276" y="125" width="48" height="30"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buscar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sqq-ke-Llt"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9W-Zm-vbw">
+                                <rect key="frame" x="180" y="221" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Ker-VV-ZtD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2JO-W0-LhJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="3vx-eB-HJs"/>
+                            <constraint firstAttribute="centerX" secondItem="2JO-W0-LhJ" secondAttribute="centerX" id="5hi-lf-UZY"/>
+                            <constraint firstAttribute="centerX" secondItem="qFk-08-AsP" secondAttribute="centerX" id="6il-vO-ILC"/>
+                            <constraint firstAttribute="centerX" secondItem="TKr-gl-kWU" secondAttribute="centerX" constant="108.5" id="8qc-Kr-fuU"/>
+                            <constraint firstItem="2JO-W0-LhJ" firstAttribute="leading" secondItem="TKr-gl-kWU" secondAttribute="trailing" constant="38" id="Fjn-MH-dja"/>
+                            <constraint firstAttribute="centerX" secondItem="2JO-W0-LhJ" secondAttribute="centerX" id="GNM-sE-2gR"/>
+                            <constraint firstAttribute="centerX" secondItem="J9W-Zm-vbw" secondAttribute="centerX" id="HCf-gg-5bl"/>
+                            <constraint firstAttribute="centerX" secondItem="omB-5z-e3c" secondAttribute="centerX" id="KFY-xX-nP5"/>
+                            <constraint firstAttribute="centerX" secondItem="TKr-gl-kWU" secondAttribute="centerX" constant="108.5" id="R87-DU-uI0"/>
+                            <constraint firstAttribute="centerX" secondItem="qFk-08-AsP" secondAttribute="centerX" id="RYt-HE-6Ap"/>
+                            <constraint firstItem="J9W-Zm-vbw" firstAttribute="top" secondItem="qFk-08-AsP" secondAttribute="bottom" constant="14" id="VZX-NC-OUs"/>
+                            <constraint firstItem="qFk-08-AsP" firstAttribute="top" secondItem="omB-5z-e3c" secondAttribute="bottom" constant="22" id="WUK-JP-WGS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J9W-Zm-vbw" secondAttribute="bottom" constant="251" id="Ydn-d9-YlE"/>
+                            <constraint firstAttribute="centerX" secondItem="omB-5z-e3c" secondAttribute="centerX" id="ZdK-OI-M9t"/>
+                            <constraint firstItem="TKr-gl-kWU" firstAttribute="bottom" secondItem="2JO-W0-LhJ" secondAttribute="bottom" id="baX-Tv-zeq"/>
+                            <constraint firstItem="omB-5z-e3c" firstAttribute="top" secondItem="2JO-W0-LhJ" secondAttribute="bottom" constant="23" id="hOU-AG-d42"/>
+                            <constraint firstAttribute="centerX" secondItem="TKr-gl-kWU" secondAttribute="centerX" constant="108.5" id="jxo-yP-4wN"/>
+                            <constraint firstAttribute="centerX" secondItem="J9W-Zm-vbw" secondAttribute="centerX" id="qA6-iR-UIr"/>
+                            <constraint firstAttribute="centerX" secondItem="omB-5z-e3c" secondAttribute="centerX" id="sDM-wh-EAn"/>
+                            <constraint firstAttribute="centerX" secondItem="qFk-08-AsP" secondAttribute="centerX" id="vqx-jl-BMI"/>
+                            <constraint firstAttribute="centerX" secondItem="2JO-W0-LhJ" secondAttribute="centerX" id="wpj-DU-txz"/>
+                            <constraint firstAttribute="centerX" secondItem="J9W-Zm-vbw" secondAttribute="centerX" id="xEd-eY-Ph5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultado" destination="J9W-Zm-vbw" id="mY6-Yd-UF2"/>
+                        <outlet property="textfieldIsbn" destination="2JO-W0-LhJ" id="A0Y-cF-x4E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
